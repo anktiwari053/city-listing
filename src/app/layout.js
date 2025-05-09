@@ -1,0 +1,31 @@
+import { Inter } from 'next/font/google';
+import './globals.css';
+import BottomNav from '@/components/mobile/BottomNav';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata = {
+  title: 'CityLiving - Find Your Perfect Accommodation',
+  description: 'Find nearby hostels, PGs, flats, and mess services for students and newcomers.',
+  manifest: '/manifest.json',
+  themeColor: '#ffffff',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'CityLiving',
+  },
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <main className="min-h-screen pb-16">
+          {children}
+        </main>
+        <BottomNav />
+      </body>
+    </html>
+  );
+}
