@@ -12,7 +12,7 @@ const cities = [
   { name: 'Mumbai', image: '/cities/mumbai.jpg' },
   { name: 'Pune', image: '/cities/pune.jpg' },
 ];
-
+  
 export default function LocationHeader() {
   const [userLocation, setUserLocation] = useState('Detecting location...');
 
